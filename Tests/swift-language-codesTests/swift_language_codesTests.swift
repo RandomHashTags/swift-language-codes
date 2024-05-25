@@ -11,6 +11,7 @@ import XCTest
 
 final class swift_language_codesTests: XCTestCase {
     func testExample() throws {
+        //print(Locale.init(identifier: Locale.LanguageCode.english.identifier).localizedString(forLanguageCode: Locale.LanguageCode.russian.identifier)!)
         /*var names:[String] = []
         var alpha2s:[String] = []
         var alpha3s:[String] = []

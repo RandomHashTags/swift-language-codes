@@ -47,6 +47,12 @@ public extension Locale {
     }
 }
 
+public extension Locale {
+    init(languageCode: Locale.LanguageCode) {
+        self = Locale(identifier: languageCode.identifier)
+    }
+}
+
 // MARK: Alpha 2
 extension Locale.LanguageCode {
     func alpha2() -> String? {
@@ -73,14 +79,14 @@ extension Locale.LanguageCode {
             case .aragonese: return "an"
             case .oldEnglish: return "ang"
             case .angika: return "anp"
-            case .apache,Western: return "apw"
+            case .apacheWestern: return "apw"
             case .arabic: return "ar"
             case .aramaic: return "arc"
             case .mapuche: return "arn"
             case .araona: return "aro"
             case .arapaho: return "arp"
             case .algerianArabic: return "arq"
-            case .arabic,Najdi: return "ars"
+            case .arabicNajdi: return "ars"
             case .arawak: return "arw"
             case .moroccanArabic: return "ary"
             case .egyptianArabic: return "arz"
@@ -688,14 +694,14 @@ extension Locale.LanguageCode {
             case .aragonese: return "arg"
             case .oldEnglish: return "ang"
             case .angika: return "anp"
-            case .apache,Western: return "apw"
+            case .apacheWestern: return "apw"
             case .arabic: return "ara"
             case .aramaic: return "arc"
             case .mapuche: return "arn"
             case .araona: return "aro"
             case .arapaho: return "arp"
             case .algerianArabic: return "arq"
-            case .arabic,Najdi: return "ars"
+            case .arabicNajdi: return "ars"
             case .arawak: return "arw"
             case .moroccanArabic: return "ary"
             case .egyptianArabic: return "arz"
@@ -1324,14 +1330,14 @@ public extension Locale.LanguageCode {
     static let aragonese:Locale.LanguageCode = get("an")
     static let oldEnglish:Locale.LanguageCode = get("ang")
     static let angika:Locale.LanguageCode = get("anp")
-    static let apache,Western:Locale.LanguageCode = get("apw")
+    static let apacheWestern:Locale.LanguageCode = get("apw")
     static let arabic:Locale.LanguageCode = get("ar")
     static let aramaic:Locale.LanguageCode = get("arc")
     static let mapuche:Locale.LanguageCode = get("arn")
     static let araona:Locale.LanguageCode = get("aro")
     static let arapaho:Locale.LanguageCode = get("arp")
     static let algerianArabic:Locale.LanguageCode = get("arq")
-    static let arabic,Najdi:Locale.LanguageCode = get("ars")
+    static let arabicNajdi:Locale.LanguageCode = get("ars")
     static let arawak:Locale.LanguageCode = get("arw")
     static let moroccanArabic:Locale.LanguageCode = get("ary")
     static let egyptianArabic:Locale.LanguageCode = get("arz")
