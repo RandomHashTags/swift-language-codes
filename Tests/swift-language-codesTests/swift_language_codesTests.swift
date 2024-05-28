@@ -8,9 +8,22 @@
 
 import XCTest
 @testable import swift_language_codes
+import Foundation
 
 final class swift_language_codesTests: XCTestCase {
     func testExample() throws {
+        /*var array:[String] = []
+        for code in Locale.LanguageCode.isoLanguageCodes {
+            var splitName:[Substring] = (Locale(languageCode: Locale.LanguageCode.english).localizedString(forIdentifier: code.identifier) ?? "nil").replacingOccurrences(of: "-", with: " ").lowercased().split(separator: " ")
+            var name:String = ""
+            for (index, value) in splitName.enumerated() {
+                name += (index == 0 ? value : value[value.startIndex].uppercased() + value[value.index(after: value.startIndex)...])
+            }
+            array.append("Locale.LanguageCode." + name)
+        }
+        for value in array {
+            print(value + ",")
+        }*/
         //print(Locale.init(identifier: Locale.LanguageCode.english.identifier).localizedString(forLanguageCode: Locale.LanguageCode.russian.identifier)!)
         /*var names:[String] = []
         var alpha2s:[String] = []
