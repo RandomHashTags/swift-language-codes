@@ -14,6 +14,7 @@ public extension Locale {
         public typealias StringLiteralType = String
         public typealias UnicodeScalarLiteralType = String
 
+        /// A two-letter or three-letter code supported by ISO 639, or a language code of your choice if using a custom language.
         public let identifier:String
 
         public init(stringLiteral value: String) {
@@ -23,6 +24,7 @@ public extension Locale {
             self.identifier = identifier
         }
 
+        /// Types of ISO 639 language code.
         public enum IdentifierType : Sendable {
             /// Two-letter alpha-2 code, e.g. "en" for English
             case alpha2
@@ -41,8 +43,9 @@ public extension Locale {
             }
         }
 
+        /// O(_n_), where _n_ is the length of `Locale.LanguageCode.isoLanguageCodes`.
         public var isISOLanguage : Bool {
-            return false // TODO: fix
+            return Locale.LanguageCode.isoLanguageCodes.first(where: { $0.alpha2() == identifier || $0.alpha3() == identifier }) != nil
         }
     }
 }
