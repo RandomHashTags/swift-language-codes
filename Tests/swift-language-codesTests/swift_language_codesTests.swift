@@ -7,8 +7,7 @@
 
 
 import XCTest
-@testable import swift_language_codes
-import Foundation
+@testable import SwiftLanguageCodes
 
 final class swift_language_codesTests: XCTestCase {
     func testExample() throws {
